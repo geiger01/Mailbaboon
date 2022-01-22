@@ -14,7 +14,7 @@ const app = express();
 app.use(
   coockieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
-    keys: [keys.coockieKey],
+    keys: [keys.cookieKey],
   })
 );
 
