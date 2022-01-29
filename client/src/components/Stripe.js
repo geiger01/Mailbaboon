@@ -15,9 +15,13 @@ export function Stripe() {
 
   return (
     <StripeCheckout
+      name="Mailbaboon"
+      description="Pay Or Die!!!"
       token={onToken}
       amount={500}
       stripeKey={process.env.REACT_APP_STRIPE_KEY}
-    />
+    >
+      <button>Give Money!</button>
+    </StripeCheckout>
   );
 }

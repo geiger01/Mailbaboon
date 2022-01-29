@@ -15,3 +15,19 @@ export function fetchUser() {
     }
   };
 }
+
+export function handleToken(token) {
+  return async (dispatch) => {
+    try {
+      const user = await authService.handleToken(token);
+      dispatch({
+        type: "SET_USER",
+        user,
+      });
+
+      return user;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+}
