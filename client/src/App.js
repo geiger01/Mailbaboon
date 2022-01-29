@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "./store/actions/auth.action";
+import { Stripe } from "./components/Stripe";
 
 export function App() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ export function App() {
     <Router>
       <a href="/auth/google"> google</a>
       <a href="/api/logout"> logout</a>
+      <Stripe />
       <Routes>
         <Route path="/surveys/new" element="" />
         <Route path="/surveys" element="" />
